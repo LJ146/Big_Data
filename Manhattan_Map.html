@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>NYC Chinatown Restaurants</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .legend {
+        background-color: #fff;
+        border-radius: 15px;
+        bottom: 50px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        padding: 10px;
+        position: absolute;
+        right: 40px;
+        z-index: 1;
+      }
+
+      .legend h4 {
+        margin: 0 0 10px;
+      }
+
+      .legend div span {
+        border-radius: 50%;
+        display: inline-block;
+        height: 10px;
+        margin-right: 5px;
+        width: 10px;
+      }
+
+      </style>
+
+  </head>
+
+  <body>
+    <div id='map'></div>
+    <div id="state-legend" class="legend">
+        <h4>Restaurants</h4>
+        <div><span style="background-color: #FD7E14"></span>Chinese</div>
+        <div><span style="background-color: #999999"></span>Asian</div>
+        <div><span style="background-color: #CCCCCC"></span>Other</div>
+
+   </div>
+
+
+
+
+<!-- Initialize the map -->
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidnZ2NSIsImEiOiJja2dzamx6YmgxMmQ3MnBtbHUzODd2amxyIn0.SdpSPxtxy0v3tjffgSmp4A';
+
+      // Initialize the basemap
+      var map = new mapboxgl.Map({
+        container: 'map', // container element id
+        style: 'mapbox://styles/vvv5/ckidlidfq2se11akum7jk5sb7',
+        center: [-73.993,40.716], // initial map center in [lon, lat]
+        zoom: 14.6
+      });
+
+
+
+      // Load data
+      map.on('load', function() {
+        // Create a legend:
+
+      });
+
+
+
+    </script>
+
+  </body>
+</html>
