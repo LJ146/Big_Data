@@ -44,6 +44,19 @@
         margin-right: 5px;
         width: 10px;
       }
+      
+      .circle.small {
+      	border-radius: 50%;
+      	width: 6px;
+      	height: 6px;
+        z-index: 86;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .circle.filled {
+      	background-color: #666666;
+      }
 
       </style>
 
@@ -53,10 +66,12 @@
     <div id='map'></div>
     <div id="state-legend" class="legend">
         <h4>Restaurants</h4>
-        <div><span style="background-color: #FD7E14"></span>Chinese</div>
-        <div><span style="background-color: #999999"></span>Asian</div>
-        <div><span style="background-color: #CCCCCC"></span>Other</div>
-
+        <div><span style="background-color: #FD7E14"></span>Open_Chinese restaurants</div>
+        <div><span style="background-color: #999999"></span>Open_Other Asian restaurants</div>
+        <div><span style="background-color: #CCCCCC"></span>Open_Non-Asian restaurants</div>
+        <div><div class="circle small" style="border: 2px solid #FD7E14;"></div>Closed_Chinese restaurants</div>
+        <div><div class="circle small" style="border: 2px solid #999999;"></div>Closed_Other Asian restaurants</div>
+        <div><div class="circle small" style="border: 2px solid #CCCCCC;"></div>Closed_Non-Asian restaurants</div>
    </div>
 
 
